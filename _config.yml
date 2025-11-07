@@ -1,11 +1,11 @@
 # Site settings
-title: 跨境@凯
-SEOTitle: 跨境@凯
+title: TWPILA
+SEOTitle: TWPILA
 header-img: img/home-bg.jpg
-email: akaisail369@gmail.com
-description: "跨境@凯：探索全球市场的边界，与你分享精彩的跨境故事 | 成为一个有态度的全球公民"
-keyword: "跨境电商, 全球化, 国际贸易, 文化交流, 跨境旅行, 创新与发展, 店铺管理, 营销策略"
-url: "https://akaisail.com" # your host, for absolute URL
+email: twpila@outlook.com
+description: "TWPILA Hardware supplier"
+keyword: "A B C"
+url: "https://2pila.com" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
