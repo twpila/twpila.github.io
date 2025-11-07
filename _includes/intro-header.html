@@ -94,20 +94,29 @@
 {% endif %}
 
 {% if include.type == 'page' %}
+{% assign show_title = true %}
+{% if page.header_hide_title %}
+{% assign show_title = false %}{% endif %}
+{% assign show_subheading = false %}
+{% if page.description and page.header_hide_subtitle != true %}
+{% assign show_subheading = true %}{% endif %}
+{% assign heading_classes = "site-heading" %}
+{% if show_title == false and show_subheading == false %}
+{% assign heading_classes = heading_classes | append: " site-heading--no-text" %}{% endif %}
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
   <div class="header-mask"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         {% if include.short %}
-        <div class="site-heading" id="tag-heading">
+        <div class="{{ heading_classes }}" id="tag-heading">
         {% else %}
-        <div class="site-heading">
+        <div class="{{ heading_classes }}">
         {% endif %}
-          {% unless page.header_hide_title %}
+          {% if show_title %}
           <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-          {% endunless %}
-          {% if page.description and page.header_hide_subtitle != true %}
+          {% endif %}
+          {% if show_subheading %}
           <span class="subheading">{{ page.description }}</span>
           {% endif %}
         </div>

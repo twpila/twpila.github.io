@@ -49,6 +49,18 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ " /css/hux-blog.min.css" | prepend: site.baseurl }}">
 
+    <style>
+        .intro-header .site-heading.site-heading--no-text {
+            min-height: 240px;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .intro-header .site-heading.site-heading--no-text {
+                min-height: 360px;
+            }
+        }
+    </style>
+
     <!-- Custom Fonts -->
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <!-- Hux change font-awesome CDN to qiniu -->

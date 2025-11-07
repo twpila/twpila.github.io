@@ -1164,6 +1164,14 @@ samp {
     padding: 150px 0;
   }
 }
+.intro-header .site-heading.site-heading--no-text {
+  min-height: 240px;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading.site-heading--no-text {
+    min-height: 360px;
+  }
+}
 .intro-header .site-heading,
 .intro-header .page-heading {
   text-align: center;
