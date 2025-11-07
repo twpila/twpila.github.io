@@ -990,19 +990,18 @@ samp {
   font-weight: 800;
   color: white;
   height: 56px;
-  line-height: 25px;
-  font-size: 18px;
+  line-height: 56px;
+  font-size: 35px;
 }
 .navbar-custom .navbar-brand:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 35px;
   line-height: 20px;
   font-weight: 800;
   letter-spacing: 1px;
-  font-size: 18px;
 }
 .navbar-custom .nav li a:active {
   background: rgba(0, 0, 0, 0.12);
