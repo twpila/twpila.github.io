@@ -1226,7 +1226,7 @@ samp {
   margin-top: -5px;
 }
 .intro-header .post-heading .meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: "Roboto", "Noto Serif", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Noto Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, serif;
   font-style: italic;
   font-weight: 300;
   font-size: 16px;
@@ -1286,7 +1286,7 @@ samp {
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: "Roboto", "Noto Serif", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Noto Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, serif;
   color: #a3a3a3;
   font-size: 16px;
   font-style: italic;
