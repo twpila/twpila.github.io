@@ -1,7 +1,7 @@
 # Site settings
 title: TWPILA
 SEOTitle: TWPILA
-header-img: img/home-bg.jpg
+header-img: img/hero-blog.jpg
 email: twpila@outlook.com
 description: "TWPILA Hardware supplier"
 keyword: "A B C"
@@ -75,7 +75,7 @@ ga_domain: 2pila.com
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: ""
-sidebar-avatar: img/cat.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/sidebar-avatar.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags

@@ -4,7 +4,7 @@ title:      Understanding Fasteners
 subtitle:   
 date:       2025-03-13 12:00:00
 author:     kai
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-default.jpg"
 catalog: true
 tags:
     - fasteners
