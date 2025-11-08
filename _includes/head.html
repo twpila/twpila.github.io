@@ -49,41 +49,32 @@
     <link rel="stylesheet" href="{{ " /css/hux-blog.min.css" | prepend: site.baseurl }}">
 
     <style>
-        .navbar-custom .navbar-brand {
+        .navbar-custom {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav li a {
             color: #1B1F23;
             transition: color 0.2s ease;
         }
 
         .navbar-custom .navbar-brand:hover,
-        .navbar-custom .navbar-brand:focus {
-            color: #FFE78F;
-        }
-
-        .navbar-custom .nav li a {
-            color: #1B1F23;
-            transition: color 0.2s ease, background-color 0.2s ease;
-            border-radius: 4px;
-        }
-
+        .navbar-custom .navbar-brand:focus,
         .navbar-custom .nav li a:hover,
         .navbar-custom .nav li a:focus {
-            color: #2E2E2E;
-            background-color: rgba(255, 255, 255, 0.9);
+            color: #E5C46E;
         }
 
         @media only screen and (min-width: 768px) {
-            .navbar-custom {
-                transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            }
-
             .navbar-custom:hover {
-                background-color: rgba(255, 255, 255, 0.95);
-                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+                background-color: rgba(255, 255, 255, 0.98);
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
             }
 
             .navbar-custom:hover .navbar-brand,
             .navbar-custom:hover .nav li a {
-                color: #1B1F23;
+                color: #E5C46E;
             }
         }
     </style>
