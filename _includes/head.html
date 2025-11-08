@@ -50,18 +50,41 @@
 
     <style>
         .navbar-custom .navbar-brand {
-          color: #1B1F23;
+            color: #1B1F23;
+            transition: color 0.2s ease;
         }
+
         .navbar-custom .navbar-brand:hover,
         .navbar-custom .navbar-brand:focus {
-          color: #1B1F23;
+            color: #FFE78F;
         }
+
         .navbar-custom .nav li a {
-          color: #1B1F23;
+            color: #1B1F23;
+            transition: color 0.2s ease, background-color 0.2s ease;
+            border-radius: 4px;
         }
+
         .navbar-custom .nav li a:hover,
         .navbar-custom .nav li a:focus {
-          color: #1B1F23;
+            color: #2E2E2E;
+            background-color: rgba(255, 231, 143, 0.85);
+        }
+
+        @media only screen and (min-width: 768px) {
+            .navbar-custom {
+                transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .navbar-custom:hover {
+                background-color: rgba(255, 255, 255, 0.95);
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            }
+
+            .navbar-custom:hover .navbar-brand,
+            .navbar-custom:hover .nav li a {
+                color: #1B1F23;
+            }
         }
     </style>
     <style>
