@@ -6,7 +6,7 @@ email: ""
 description: "TWPILA Hardware supplier"
 keyword: "A B C"
 url: "https://2pila.com"
-store_url: "twpila.com"
+store_url: "https://twpila.com"
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
