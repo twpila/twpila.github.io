@@ -1,0 +1,45 @@
+---
+layout:     post
+title:      Hand Tools
+subtitle:   
+date:       2025-03-14 12:00:00
+author:
+header-img: "img/post-default.jpg"
+cover: "img/hero-blog.jpg"
+catalog: true
+tags:
+    - powertools
+    - safety
+---
+
+### Introduction to Hand Tools
+
+Hand tools are essential in the world of hardware and are used for a variety of tasks, from simple household repairs to complex construction work. These tools are designed for manual operation, meaning they do not require electrical power or batteries.
+
+Common Types of Hand Tools:
+
+Hammers: Used for driving nails, breaking objects, or shaping metal.
+
+Claw Hammer: One side with a curved split for removing nails, the other side for striking.
+
+Sledgehammer: A larger hammer for heavy-duty work like breaking concrete.
+
+Screwdrivers: These are tools for turning screws.
+
+Flathead Screwdriver: Used for screws with a single flat groove.
+
+Phillips Screwdriver: Designed for screws with a cross-shaped slot.
+
+Pliers: Used for gripping, bending, or cutting.
+
+Needle Nose Pliers: Used for precision work and gripping small objects.
+
+Cutting Pliers: Designed specifically for cutting wire or cable.
+
+Safety Tips:
+
+Always inspect tools for wear and damage before use.
+
+Wear protective gear like safety goggles and gloves.
+
+Store tools in a dry, clean environment to prevent rust.
