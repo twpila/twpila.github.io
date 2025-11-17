@@ -5,9 +5,14 @@ header_hide_subtitle: true
 description: ""
 ---
 
+<div class="row">
 {% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
+  <div class="col-xs-12 col-sm-6 col-lg-4">
+    <div class="post-preview">
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <div class="post-cover">
+          <img class="img-responsive" alt="{{ post.title }}" src="{{ site.baseurl }}/{% if post.header-img %}{{ post.header-img }}{% else %}{{ site.header-img }}{% endif %}">
+        </div>
         <h2 class="post-title">
             {{ post.title }}
         </h2>
@@ -23,13 +28,14 @@ description: ""
                 {{ post.content | strip_html | truncate:200 }}
             {% endif %}
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
+      </a>
+      <p class="post-meta">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </p>
+    </div>
+  </div>
 {% endfor %}
+</div>
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
