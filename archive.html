@@ -68,6 +68,15 @@ header-img: "img/hero-tags.jpg"
     margin: 6px 0 0 0;
     font-size: 13px;
   }
+  /* 覆盖 mini-post-list 里旧样式的绝对定位，避免时间与摘要重叠 */
+  .mini-post-list .post-preview.home-post-card > .post-meta{
+    position: static;
+    right: auto;
+    bottom: auto;
+    margin: 6px 16px 16px 16px;
+    line-height: 1.4;
+    font-size: 13px;
+  }
   @media (max-width: 480px){
     .home-post-card .post-cover img{ height: 200px; }
   }
