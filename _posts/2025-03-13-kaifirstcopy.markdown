@@ -5,6 +5,7 @@ subtitle:
 date:       2025-03-13 12:00:00
 author:     kai
 header-img: "img/post-default.jpg"
+cover:"img/hero-tags.jpg"
 catalog: true
 tags:
     - fasteners

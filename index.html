@@ -78,7 +78,8 @@ description: ""
     <div class="post-preview home-post-card">
       <a href="{{ post.url | prepend: site.baseurl }}">
         <div class="post-cover">
-          <img class="img-responsive" alt="{{ post.title }}" src="{{ site.baseurl }}/{% if post.header-img %}{{ post.header-img }}{% else %}{{ site.header-img }}{% endif %}">
+          {% assign list_cover = post.cover | default: post.header-img | default: site.header-img %}
+          <img class="img-responsive" alt="{{ post.title }}" src="{{ site.baseurl }}/{{ list_cover }}">
           <div class="cover-gradient">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}

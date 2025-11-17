@@ -5,6 +5,7 @@ subtitle:
 date:       2025-03-12 12:00:00
 author:
 header-img: "img/post-default.jpg"
+cover: "img/hero-blog.jpg"
 catalog: true
 tags:
     - powertools

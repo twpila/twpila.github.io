@@ -7,6 +7,72 @@ description: ""
 header-img: "img/hero-tags.jpg"
 ---
 
+<style>
+  /* 归档页卡片样式，与首页统一 */
+  .home-post-card{
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    transition: transform .2s ease, box-shadow .2s ease;
+    margin-bottom: 30px;
+  }
+  .home-post-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.12);
+  }
+  .home-post-card .post-cover{
+    position: relative;
+  }
+  .home-post-card .post-cover img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+  }
+  .home-post-card .post-cover .cover-gradient{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px 16px;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%);
+  }
+  .home-post-card .post-cover .cover-gradient .post-title{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .home-post-card .post-cover .cover-gradient .post-subtitle{
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: .92;
+  }
+  .home-post-card .card-body{
+    padding: 14px 16px 10px 16px;
+  }
+  .home-post-card .post-content-preview{
+    color: #444;
+    line-height: 1.65;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* 约 4 行 */
+    max-height: calc(1.65em * 4);
+  }
+  .home-post-card .post-meta{
+    padding: 0 16px 16px 16px;
+    color: #999;
+    margin: 6px 0 0 0;
+    font-size: 13px;
+  }
+  @media (max-width: 480px){
+    .home-post-card .post-cover img{ height: 200px; }
+  }
+</style>
+
 <!--
 Credits: this page shamelessly borrowed a lot from:
 https://github.com/kitian616/jekyll-TeXt-theme
@@ -44,7 +110,6 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
 				{%- assign _sorted_list = _sorted_list | reverse -%}
 
-
 				{%- for _article in _sorted_list -%}
 				{%- assign _tags = '' -%}
 				{%- for _tag in _article.tags -%}
@@ -59,29 +124,45 @@ https://github.com/kitian616/jekyll-TeXt-theme
 				{% comment %} group by year {% endcomment %}
 				{%- assign _currentdate = _article.date | date: '%Y' -%}
 				{%- if _currentdate != _date -%}
-				{%- unless forloop.first -%}</section>{%- endunless -%}
+				{%- unless forloop.first -%}</div></section>{%- endunless -%}
 				<section>
 					<span class="fa listing-seperator">
 						<span class="tag-text">{{ _currentdate }}</span>
 					</span>
+					<div class="row">
 					{%- assign _date = _currentdate -%}
 					{%- endif -%}
 
-					<div class="post-preview item" data-tags="{{ _tags }}">
-						<a href="{{ _article.url | prepend: site.baseurl }}">
-							<h2 class="post-title">
-								{{ _article.title }}
-							</h2>
-							{% if _article.subtitle %}
-							<h3 class="post-subtitle">
-								{{ _article.subtitle }}
-							</h3>
-							{% endif %}
-						</a>
-						<hr>
+					<div class="col-xs-12 col-sm-6 col-lg-4 item" data-tags="{{ _tags }}">
+						<div class="post-preview home-post-card">
+							<a href="{{ _article.url | prepend: site.baseurl }}">
+								<div class="post-cover">
+									{% assign list_cover = _article.cover | default: _article.header-img | default: site.header-img %}
+									<img class="img-responsive" alt="{{ _article.title }}" src="{{ site.baseurl }}/{{ list_cover }}">
+									<div class="cover-gradient">
+										<h2 class="post-title">{{ _article.title }}</h2>
+										{% if _article.subtitle %}
+										<h3 class="post-subtitle">{{ _article.subtitle }}</h3>
+										{% endif %}
+									</div>
+								</div>
+								<div class="card-body">
+									<div class="post-content-preview">
+										{% if _article.lang == 'en' %}
+											{{ _article.content | strip_html | truncate:300 }}
+										{% else %}
+											{{ _article.content | strip_html | truncate:200 }}
+										{% endif %}
+									</div>
+								</div>
+							</a>
+							<p class="post-meta">
+								{{ _article.date | date: "%B %-d, %Y" }}
+							</p>
+						</div>
 					</div>
 					{%- if forloop.last -%}
-				</section>{%- endif -%}
+				</div></section>{%- endif -%}
 				{% endfor %}
 			</div>
 		</div>

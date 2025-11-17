@@ -5,6 +5,7 @@ subtitle:
 date:       2025-03-14 12:00:00
 author:     kai
 header-img: "img/post-default.jpg"
+cover:"img/post-default.jpg"
 catalog: true
 tags:
     - handtools
