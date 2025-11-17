@@ -156,14 +156,12 @@ https://github.com/kitian616/jekyll-TeXt-theme
 								<div class="post-cover">
 									{% assign list_cover = _article.cover | default: _article.header-img | default: site.header-img %}
 									<img class="img-responsive" alt="{{ _article.title }}" src="{{ site.baseurl }}/{{ list_cover }}">
-									<div class="cover-gradient">
-										<h2 class="post-title">{{ _article.title }}</h2>
-										{% if _article.subtitle %}
-										<h3 class="post-subtitle">{{ _article.subtitle }}</h3>
-										{% endif %}
-									</div>
 								</div>
 								<div class="card-body">
+									<h2 class="post-title">{{ _article.title }}</h2>
+									{% if _article.subtitle %}
+									<h3 class="post-subtitle">{{ _article.subtitle }}</h3>
+									{% endif %}
 									<div class="post-content-preview">
 										{% if _article.lang == 'en' %}
 											{{ _article.content | strip_html | truncate:300 }}

@@ -80,14 +80,12 @@ description: ""
         <div class="post-cover">
           {% assign list_cover = post.cover | default: post.header-img | default: site.header-img %}
           <img class="img-responsive" alt="{{ post.title }}" src="{{ site.baseurl }}/{{ list_cover }}">
-          <div class="cover-gradient">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% endif %}
-          </div>
         </div>
         <div class="card-body">
+          <h2 class="post-title">{{ post.title }}</h2>
+          {% if post.subtitle %}
+          <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+          {% endif %}
           <div class="post-content-preview">
               {% if post.lang == 'en' %}
                   {{ post.content | strip_html | truncate:300 }}
