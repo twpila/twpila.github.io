@@ -79,6 +79,12 @@ header-img: "img/hero-tags.jpg"
     font-size: 13px;
     text-align: left;
   }
+  /* 统一 tags 列表卡片宽度，与首页一致 */
+  .mini-post-list .post-preview.home-post-card{
+    margin-left: 0 !important; /* 覆盖主题在 >=768px 时追加的 margin-left:20px */
+    width: 100%;
+    box-sizing: border-box;
+  }
   @media (max-width: 480px){
     .home-post-card .post-cover img{ height: 200px; }
   }
